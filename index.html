@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackrabbit Games</title>
+  <meta name="description" content="Simple, engaging games for everyone — by Jackrabbit Games." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 14 Q12 9 16 9 Q18 9 18 12 L18 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M20 10 Q20 7 23 7 Q26 7 26 11 L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <rect x="10" y="16" width="16" height="10" rx="5" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="15" cy="21" r="1.5" fill="currentColor"/>
+          <circle cx="21" cy="21" r="1.5" fill="currentColor"/>
+        </svg>
+        Jackrabbit Games
+      </a>
+      <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        <a href="https://moge14.github.io/gamehub-moge14/" target="_blank" rel="noopener" class="nav-cta">Play Online ↗</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobile-menu">
+      <a href="#games">Games</a>
+      <a href="#upcoming">Upcoming</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+      <a href="https://moge14.github.io/gamehub-moge14/" target="_blank" rel="noopener">Play Online ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Jackrabbit Games</div>
+      <h1 class="hero-headline">
+        Simple games.<br/>
+        <em>Real fun.</em>
+      </h1>
+      <p class="hero-sub">We craft lightweight, engaging games for everyone — no installs required, just pick up and play.</p>
+      <div class="hero-actions">
+        <a href="#games" class="btn-primary">Browse Games</a>
+        <a href="https://moge14.github.io/gamehub-moge14/" target="_blank" rel="noopener" class="btn-ghost">Play in Browser ↗</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hc1"><span>🎮</span></div>
+      <div class="hero-card hc2"><span>⚡</span></div>
+      <div class="hero-card hc3"><span>🐇</span></div>
+    </div>
+  </section>
+
+  <!-- GAMEHUB BANNER -->
+  <section id="gamehub-banner">
+    <div class="banner-inner">
+      <span class="banner-label">Also available on</span>
+      <a href="https://moge14.github.io/gamehub-moge14/" target="_blank" rel="noopener" class="banner-link">
+        <svg viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M6 10 Q10 4 14 10 Q10 16 6 10Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        GameHub — Play instantly in your browser, no download needed
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- GAMES SECTION -->
+  <section id="games">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Our Games</span>
+        <h2>Pick up &amp; play</h2>
+        <p>Every game is designed to be immediately fun. No tutorials, no friction.</p>
+      </div>
+      <div id="games-grid" class="games-grid">
+        <div class="games-loading">
+          <div class="spinner"></div>
+          <p>Loading games…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING SECTION -->
+  <section id="upcoming">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">Coming Soon</span>
+        <h2>What's cooking</h2>
+        <p>Games in active development. Stay tuned.</p>
+      </div>
+      <div id="upcoming-grid" class="upcoming-grid"></div>
+      <div class="upcoming-empty" id="upcoming-empty" style="display:none">
+        <p>Nothing announced yet — check back soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner about-inner">
+      <div class="about-text">
+        <span class="section-tag">About Us</span>
+        <h2>Who we are</h2>
+        <p>Jackrabbit Games is an indie game studio focused on one thing: fun. We make simple, polished games that anyone can pick up and enjoy — no prior gaming experience required.</p>
+        <p>Our philosophy is that the best games are often the simplest. We obsess over the feel of every interaction so you get a satisfying, snappy experience every time.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-num" id="stat-games">—</span>
+          <span class="stat-label">Games Released</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Hours of Fun</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">Free</span>
+          <span class="stat-label">Always</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <div class="section-inner support-inner">
+      <div class="section-header">
+        <span class="section-tag">Support</span>
+        <h2>Need help?</h2>
+        <p>Found a bug, got feedback, or just want to say hi? We'd love to hear from you.</p>
+      </div>
+      <!--
+        On GitHub Pages there is no server, so this form opens the user's
+        default mail client pre-filled. If you want silent background sends,
+        sign up at https://formspree.io and replace the action attribute with
+        your Formspree endpoint (e.g. https://formspree.io/f/XXXXXXXX).
+      -->
+      <form id="support-form" class="support-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="s-name">Your name</label>
+            <input type="text" id="s-name" placeholder="Alex Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="s-email">Your email</label>
+            <input type="email" id="s-email" placeholder="alex@example.com" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="s-subject">Subject</label>
+          <select id="s-subject">
+            <option value="bug">Bug report</option>
+            <option value="feedback">Feedback</option>
+            <option value="question">Question</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="s-msg">Message</label>
+          <textarea id="s-msg" rows="5" placeholder="Tell us what's up…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <div id="form-feedback" class="form-feedback" style="display:none"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 14 Q12 9 16 9 Q18 9 18 12 L18 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M20 10 Q20 7 23 7 Q26 7 26 11 L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <rect x="10" y="16" width="16" height="10" rx="5" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="15" cy="21" r="1.5" fill="currentColor"/>
+          <circle cx="21" cy="21" r="1.5" fill="currentColor"/>
+        </svg>
+        Jackrabbit Games
+      </div>
+      <div class="footer-links">
+        <a href="#games">Games</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        <a href="https://moge14.github.io/gamehub-moge14/" target="_blank" rel="noopener">GameHub ↗</a>
+      </div>
+      <p class="footer-copy">© 2025 Jackrabbit Games · Made with ❤️ and too much coffee.</p>
+    </div>
+  </footer>
+
+  <!-- GAME MODAL -->
+  <div id="game-modal" class="modal-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Game details">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- games.js must load before main.js -->
+  <script src="js/games.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
